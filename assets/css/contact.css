@@ -1,0 +1,49 @@
+/* =================================================
+   CONTACT CARD (PROJECT CARD İLE UYUMLU)
+================================================= */
+
+.contact-card {
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  text-align: center;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+.contact-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--link-color);
+}
+
+/* Title */
+.contact-card h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Text */
+.contact-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+/* Link */
+.contact-card a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}

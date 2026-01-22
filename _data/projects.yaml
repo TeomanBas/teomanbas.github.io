@@ -1,0 +1,29 @@
+### sample project ###
+#- name: "Local AI System"
+  #description: "Local çalışan, modüler ve extensible AI sistem mimarisi."
+  #github: "https://github.com/TeomanBas/local-ai-system"
+  #tech:
+  #  - Python
+  #  - Docker
+  #  - FastAPI
+
+- id: film_ara
+  name: "Film Arama Motoru"
+  description: "Omdb api ile film aramaları yapan bir web uygulaması"
+  category: web_app
+  github: "https://github.com/TeomanBas/filmara"
+  demo_link: "https://filmara.rf.gd/"
+  tech:
+    - Html
+    - bootstrap
+    - Php
+    - Javascript
+
+- id: Okul_otomasyon_projesi
+  name: "Okul Otomasyon Uygulaması"
+  description: "Örnek bir okulun kayıtlarının tutulduğu basit bir otomasyon projesidir"
+  category: desktop_app
+  github: "https://github.com/TeomanBas/OkulOtomasyonProjesi"
+  tech:
+    - C#
+    - Tsql

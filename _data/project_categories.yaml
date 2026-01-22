@@ -1,0 +1,11 @@
+- id: web_app
+  title: "🌐 Web Uygulamalarım"
+
+- id: desktop_app
+  title: "🖥️ Masaüstü Uygulamalarım"
+
+- id: python_script
+  title: "🐍 Python Scriptleri"
+
+- id: automation
+  title: "⚙️ Otomasyon & Araçlar"
