@@ -1,9 +1,15 @@
 ---
-layout: blog
-title: "Blog"
-description: "Teknik blog yakında yayında olacak."
-robots: noindex
+layout: post
+title: "İlk Blog Yazım DENEME"
+description: "Blog sistemini nasıl kurduğumu anlatıyorum"
+date: 2026-03-05
+tags: python javascript css 
+categories : jekyll
+author : örnek yazar
 ---
+
+## Giriş
+
 
 ## 🚧 Blog Yakında
 
@@ -20,6 +26,3 @@ Bu bölümde:
 
 📌 Şu an hazırlık aşamasındayım.  
 Çok yakında burada görüşürüz.
-
-
-

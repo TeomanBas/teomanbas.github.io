@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Tagler",
+  "url": "https://teomanbas.com/categories/",
+  "description": "Teoman Bas blog tagleri ve içerikleri.",
+  "about": {
+    "@type": "Person",
+    "name": "Teoman Bas"
+  },
+  "mainEntity": {
+    "@type": "ItemList"
+  }
+  /*
+    "mainEntity": {
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://teomanbas.com/post-1"
+    }
+  ]
+}
+  */
+}
+</script>
+
+ <!-- Projects CSS -->
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/categories.css' | relative_url }}"
+  >
+    <link
+    rel="stylesheet"
+    href="{{ '/assets/css/pagination.css' | relative_url }}"
+  >
+
+{{ content }}

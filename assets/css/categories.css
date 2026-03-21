@@ -1,0 +1,10 @@
+.project-category-nav a {
+  text-decoration: none;
+}
+
+.project-category-nav a:hover {
+  text-decoration: none;
+}
+a {
+  text-decoration: none !important;
+}

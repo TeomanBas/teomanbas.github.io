@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Kategoriler",
+  "url": "https://teomanbas.com/categories/",
+  "description": "Teoman Bas blog kategorileri ve içerikleri.",
+  "about": {
+    "@type": "Person",
+    "name": "Teoman Bas"
+  },
+  "mainEntity": {
+    "@type": "ItemList"
+  }
+}
+</script>
+
+ <!-- Projects CSS -->
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/categories.css' | relative_url }}"
+  >
+    <link
+    rel="stylesheet"
+    href="{{ '/assets/css/pagination.css' | relative_url }}"
+  >
+
+{{ content }}
