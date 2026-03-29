@@ -1,0 +1,26 @@
+---
+layout: blog
+title: "Öne Çıkan Postlar"
+permalink: /blog/featured/
+---
+
+{% include blog_home_sections.html %}
+
+{% assign limit = 5 %}
+{% comment %}
+  FEATURED
+{% endcomment %}
+{% if featured_sorted.size > 0 %}
+<section>
+  <h2><a href="/blog/featured">Featured</a></h2>
+
+  <ul>
+    {% for post in featured_sorted limit: limit %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        (Lvl: {{ post.post_level | default: 0 }})
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

@@ -1,17 +1,16 @@
 ---
 layout: post
-title: "Docker Nedir? Temelden İleri Seviyeye Rehber"
-description: "Docker nedir, nasıl çalışır ve neden kullanılır? Container mantığını ve gerçek kullanım senaryolarını detaylı şekilde öğrenin."
-date: 2026-03-23 20:00:00 +0300
+title: "kubernetes rehber"
+description: "kurbernetes nedir"
+date: 2026-03-23 20:06:00 +0300
 author: "Teoman Bas"
 categories: [DevOps, Docker]
 tags: [docker, container, linux, devops, virtualization]
-image: /assets/images/docker-cover.jpg
-slug: docker-nedir
+image: /assets/images/kubernetes.jpg
 filter_key: recommended
 filter_value: true
-post_level: -1   
-permalink: /blog/post/:categories/:slug/
+post_level: 1   
+permalink: /blog/post/:categories/:title/
 ---
 
 ## 🚀 Docker Nedir?

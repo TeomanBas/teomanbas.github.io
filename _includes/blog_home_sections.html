@@ -1,0 +1,35 @@
+{% comment %}
+  TÜM POSTLARI TARAYIP SINIFLANDIRMA
+{% endcomment %}
+
+{% assign featured_posts = "" | split: "" %}
+{% assign starred_posts = "" | split: "" %}
+{% assign pinned_posts = "" | split: "" %}
+{% assign recommended_posts = "" | split: "" %}
+
+{% for post in site.posts %}
+  {% if post.filter_value == true %}
+    {% case post.filter_key %}
+      {% when "featured" %}
+        {% assign featured_posts = featured_posts | push: post %}
+      {% when "starred" %}
+        {% assign starred_posts = starred_posts | push: post %}
+      {% when "pinned" %}
+        {% assign pinned_posts = pinned_posts | push: post %}
+      {% when "recommended" %}
+        {% assign recommended_posts = recommended_posts | push: post %}
+    {% endcase %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  SIRALAMA (LEVEL YÜKSEK → DÜŞÜK)
+{% endcomment %}
+
+{% assign featured_sorted = featured_posts | sort: "post_level" | reverse %}
+{% assign starred_sorted = starred_posts | sort: "post_level" | reverse %}
+{% assign pinned_sorted = pinned_posts | sort: "post_level" | reverse %}
+{% assign recommended_sorted = recommended_posts | sort: "post_level" | reverse %}
+
+
+

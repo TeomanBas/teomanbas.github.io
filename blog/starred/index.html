@@ -1,0 +1,33 @@
+---
+layout: blog
+title: "Yıldızlı Postlar"
+filter_key: starred
+filter_value: true
+permalink: /blog/starred/
+---
+
+{% include blog_home_sections.html %}
+
+{% assign limit = 5 %}
+
+
+{% comment %}
+  STARRED
+{% endcomment %}
+{% if starred_sorted.size > 0 %}
+<section>
+  <h2><a href="/blog/starred">Starred</a></h2>
+
+  <ul>
+    {% for post in starred_sorted limit: limit %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        (Lvl: {{ post.post_level | default: 0 }})
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+
+

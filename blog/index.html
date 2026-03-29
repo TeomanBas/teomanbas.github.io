@@ -1,5 +1,91 @@
 ---
 layout: blog
-title: "Blog"
+title: "Blog Home"
 permalink: /blog/
 ---
+
+
+<section class="quick-links">
+  <a href="/blog/posts/">Tüm Yazılar</a>
+  <a href="/blog/categories">Kategoriler</a>
+  <a href="/blog/tags">Etiketler</a>
+</section>
+
+
+{% include blog_home_sections.html %}
+
+{% assign limit = 5 %}
+{% comment %}
+  FEATURED
+{% endcomment %}
+{% if featured_sorted.size > 0 %}
+<section>
+  <h2><a href="/blog/featured">Featured</a></h2>
+
+  <ul>
+    {% for post in featured_sorted limit: limit %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        (Lvl: {{ post.post_level | default: 0 }})
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+
+{% comment %}
+  STARRED
+{% endcomment %}
+{% if starred_sorted.size > 0 %}
+<section>
+  <h2><a href="/blog/starred">Starred</a></h2>
+
+  <ul>
+    {% for post in starred_sorted limit: limit %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        (Lvl: {{ post.post_level | default: 0 }})
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+
+{% comment %}
+  PINNED
+{% endcomment %}
+{% if pinned_sorted.size > 0 %}
+<section>
+  <h2><a href="/blog/pinned">Pinned</a></h2>
+
+  <ul>
+    {% for post in pinned_sorted limit: limit %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        (Lvl: {{ post.post_level | default: 0 }})
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+
+{% comment %}
+  RECOMMENDED
+{% endcomment %}
+{% if recommended_sorted.size > 0 %}
+<section>
+  <h2><a href="/blog/recommended">Recommended</a></h2>
+
+  <ul>
+    {% for post in recommended_sorted limit: limit %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        (Lvl: {{ post.post_level | default: 0 }})
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

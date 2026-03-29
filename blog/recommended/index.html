@@ -1,0 +1,30 @@
+---
+layout: blog
+title: "Önerilen Post ve Seriler"
+filter_key: recommended
+filter_value: true
+permalink: /blog/recommended/
+---
+
+{% include blog_home_sections.html %}
+
+{% assign limit = 10 %}
+
+
+{% comment %}
+  recommeded
+{% endcomment %}
+{% if recommended_sorted.size > 0 %}
+<section>
+  <h2><a href="/blog/recommended/">Recommended</a></h2>
+
+  <ul>
+    {% for post in recommended_sorted limit: limit %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        (Lvl: {{ post.post_level | default: 0 }})
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

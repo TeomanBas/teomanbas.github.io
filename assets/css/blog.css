@@ -172,3 +172,19 @@
   }
 }
 
+/* =============================================== 
+  BLOG HOME 
+=============================================== */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.quick-links a {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
