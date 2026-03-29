@@ -678,3 +678,18 @@ body.theme-dark .navbar-brand img
 .custom-navbar .nav-link:focus {
   color: var(--muted);
 }
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+body {
+  padding-top: 80px; /* navbar yüksekliğine göre ayarla */
+}
