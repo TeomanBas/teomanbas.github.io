@@ -1,0 +1,22 @@
+---
+layout: blog
+title: "Arşiv"
+description: "Blog yazılarının kronolojik geçmişi"
+---
+<script>
+function toggleYear(button) {
+  const content = button.nextElementSibling;
+  const arrow = button.querySelector(".arrow");
+
+  content.classList.toggle("open");
+  arrow.classList.toggle("rotate");
+}
+</script>
+
+
+    <link
+    rel="stylesheet"
+    href="{{ '/assets/css/archive.css' | relative_url }}"
+  >
+
+{{ content }}

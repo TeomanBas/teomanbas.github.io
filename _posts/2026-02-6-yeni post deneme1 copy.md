@@ -5,10 +5,10 @@ description: "Blog sistemini nasıl kurduğumu anlatıyorum"
 tags: python javascript css
 categories : web development
 author : DENEME
+date: 2026-03-13
 ---
 
 ## Giriş
-
 
 ## 🚧 Blog Yakında
 

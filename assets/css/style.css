@@ -122,6 +122,18 @@ a:hover {
   border: none;
 }
 
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
 /* =================================================
    HERO
 ================================================= */
@@ -604,4 +616,65 @@ body:not(.theme-dark) .navbar-brand img
 body.theme-dark .navbar-brand img
 {
   src: url("/assets/favicon/favicon.svg");
+}
+/* =========================
+   BLOG DROPDOWN MENU
+========================= */
+
+.dropdown-menu {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+}
+
+/* Dropdown item base */
+.dropdown-item {
+  color: var(--text);
+  opacity: 0.9;
+}
+
+/* Hover state */
+.dropdown-item:hover {
+  background-color: var(--accent);
+  color: #fff;
+  opacity: 1;
+}
+
+/* Dark mode override (gereksiz tekrarlar temizlendi) */
+.theme-dark .dropdown-item {
+  color: var(--text);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+}
+
+/* Nav link base */
+.custom-navbar .nav-link {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+/* Hover */
+.custom-navbar .nav-link:hover {
+  color: var(--accent);
+}
+
+/* Dropdown açıkken aktif görünüm */
+.custom-navbar .nav-item.dropdown.show > .nav-link {
+  color: var(--accent);
+}
+
+/* Focus reset */
+.custom-navbar .nav-link:focus {
+  color: var(--muted);
 }

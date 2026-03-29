@@ -1,0 +1,54 @@
+---
+layout: archive
+title: "Arşiv"
+permalink: /blog/archives/
+---
+
+
+<section class="archive-container">
+
+  <h1 class="archive-title">Arşiv</h1>
+
+  {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+
+  {% for year in postsByYear %}
+
+    <div class="archive-year">
+
+      <!-- YEAR HEADER -->
+      <button class="year-toggle" onclick="toggleYear(this)">
+        <span>{{ year.name }}</span>
+        <span class="arrow">▼</span>
+      </button>
+
+      <!-- YEAR CONTENT -->
+      <div class="year-content">
+
+        {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
+
+        {% for month in postsByMonth %}
+
+          <div class="archive-month">
+            <h3 class="month-title">{{ month.name }}</h3>
+
+            <ul class="archive-list">
+              {% for post in month.items %}
+                <li class="archive-item">
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                  <span class="archive-date">{{ post.date | date: "%d %b" }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+
+          </div>
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  {% endfor %}
+
+</section>
+

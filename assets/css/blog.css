@@ -1,0 +1,174 @@
+/* BLOG HEADER */
+.blog-header {
+  text-align: center;
+  margin: 50px auto 20px;
+}
+
+.blog-nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.blog-search {
+  margin-top: 15px;
+}
+
+.blog-search input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  width: 240px;
+}
+
+
+/* FEATURED */
+.featured-post {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card-bg);
+}
+
+
+/* TOP POSTS */
+.top-posts {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.top-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.top-post-item {
+  font-size: 0.95rem;
+}
+
+
+/* TAG CLOUD */
+.tag-cloud {
+  max-width: 800px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+/* =================================================
+   BLOG LAYOUT (2 COLUMN)
+================================================= */
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* MAIN CONTENT */
+.blog-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* SIDEBAR */
+.blog-sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* SIDEBAR BOX */
+.sidebar-box {
+  padding: 1.2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: var(--card-bg);
+}
+
+/* SIDEBAR TITLE */
+.sidebar-box h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  color: var(--text);
+}
+
+/* LIST */
+.sidebar-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-box li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-box a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.sidebar-box a:hover {
+  color: var(--accent);
+}
+
+/* TAG CLOUD */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* =================================================
+   SIDEBAR SCROLL FIX
+================================================= */
+
+.blog-sidebar {
+  position: sticky;
+
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+  padding-bottom: 60px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.blog-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+
+@media (max-width: 900px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-sidebar {
+    position: static;
+  }
+}
+

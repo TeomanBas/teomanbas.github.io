@@ -1,25 +1,92 @@
 ---
 layout: default
+title: "Blog"
+description: "Teknik blog web sitem"
 ---
 
-{{ content }}
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Teoman Bas Teknik Blog",
-  "url": "https://teomanbas.com/blog/",
-  "description": "Linux, Docker, CI/CD, backend ve sistem tasarımı üzerine teknik yazılar.",
-  "author": {
-    "@type": "Person",
-    "name": "Teoman Bas",
-    "url": "https://teomanbas.com"
-  }
-}
-</script>
 
   <link
     rel="stylesheet"
     href="{{ '/assets/css/pagination.css' | relative_url }}"
   >
+
+    <link
+    rel="stylesheet"
+    href="{{ '/assets/css/blog.css' | relative_url }}"
+  >
+
+
+<section class="blog-layout">
+
+  <!-- LEFT: MAIN CONTENT -->
+  <div class="blog-main">
+
+      {{ content }}
+
+  </div>
+
+  <!-- RIGHT: SIDEBAR -->
+  <aside class="blog-sidebar">
+
+    <!-- SON YAZILAR -->
+    <div class="sidebar-box">
+      <h3>Son Yazılar</h3>
+      <ul>
+        {% for post in site.posts limit:5 %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- TAGS -->
+    <div class="sidebar-box">
+      <h3>Popüler Etiketler</h3>
+      <div class="tag-cloud">
+        {% for tag in site.tags limit:10 %}
+          <a href="/blog/tags/#tag-{{ tag[0] | slugify }}" class="tag">
+            <i class="bi bi-tags"></i> {{ tag[0] }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+
+    {% assign all_categories = "" %}
+
+    {% for post in site.posts %}
+      {% if post.categories %}
+        {% for cat in post.categories %}
+          {% assign all_categories = all_categories | append: cat | append: "," %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign category_array = all_categories | split: "," | uniq %}
+        <!-- CATEGORY -->
+    <div class="sidebar-box">
+      <h3>Popüler Kategoriler</h3>
+      <div class="tag-cloud">
+        {% for category in category_array limit:10 %}
+          <a href="/blog/categories/#category-{{ category | slugify }}" >
+            📂 {{ category }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+              <!-- most popular post -->
+               <!-- most popular series -->
+                <!-- most popular kategori -->
+                 <!-- önerilen postlar -->
+
+    <div class="sidebar-box">
+      <h3>Arşiv</h3>
+      <a href="/blog/archives/">Tüm arşivi görüntüle →</a>
+    </div>
+
+  </aside>
+
+</section>
+
+
