@@ -10,7 +10,10 @@ image: /assets/images/docker-cover.jpg
 slug: docker-nedir
 filter_key: recommended
 filter_value: true
-post_level: -1   
+post_level: -1 
+series:
+  name: "Docker Serisi"
+  order: 1  
 permalink: /blog/post/:categories/:slug/
 ---
 
@@ -43,7 +46,13 @@ Container’lar:
 Örnek:
 
 ```bash
-docker run -d -p 80:80 nginx
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;docker run -d -p 80:80 nginx;docker run -d -p 80:80 nginx;docker run -d -p 80:80 nginx;
 ````
 
 Bu komut:

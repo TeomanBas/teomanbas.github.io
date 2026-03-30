@@ -6,6 +6,7 @@
 {% assign starred_posts = "" | split: "" %}
 {% assign pinned_posts = "" | split: "" %}
 {% assign recommended_posts = "" | split: "" %}
+{% assign post_series = "" | split: "" %}
 
 {% for post in site.posts %}
   {% if post.filter_value == true %}
