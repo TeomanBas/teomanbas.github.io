@@ -6,7 +6,9 @@
   
   <!--SEO-->
   {% seo %}
-
+  {% if paginator.page > 1 %}
+    <meta name="robots" content="noindex, follow">
+  {% endif %}
   <!-- RSS Feed -->
   <link
     rel="alternate"

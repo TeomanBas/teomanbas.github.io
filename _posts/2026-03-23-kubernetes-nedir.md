@@ -10,7 +10,6 @@ image: /assets/images/kubernetes.jpg
 filter_key: recommended
 filter_value: true
 post_level: 1   
-permalink: /blog/post/:categories/:title/
 ---
 
 ## 🚀 Docker Nedir?

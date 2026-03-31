@@ -20,7 +20,7 @@
 
 title: Teoman BAŞ
 email: teomanbas@protonmail.com
-description: "Linux, Docker, CI/CD, backend ve sistem tasarımı üzerine teknik blog ve projeler."
+description: "Teknik blog ve projeler."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://teomanbas.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: teomanbas
@@ -68,6 +68,10 @@ plugins:
 
 paginate: 5
 paginate_path: "/blog/posts/page:num"
+
+# _config.yml
+# Blog post URL yapısı
+permalink: /blog/post/:categories/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

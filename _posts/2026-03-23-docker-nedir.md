@@ -7,14 +7,13 @@ author: "Teoman Bas"
 categories: [DevOps, Docker]
 tags: [docker, container, linux, devops, virtualization]
 image: /assets/images/docker-cover.jpg
-slug: docker-nedir
 filter_key: recommended
 filter_value: true
 post_level: -1 
 series:
   name: "Docker Serisi"
   order: 1  
-permalink: /blog/post/:categories/:slug/
+#permalink: /blog/post/:categories/:title
 ---
 
 ## 🚀 Docker Nedir?
