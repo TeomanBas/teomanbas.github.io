@@ -48,7 +48,26 @@ layout: blog
       {{ content }}
     </div>
 
+    <br>
     <hr>
+    
+
+
+    <!-- RELATED POSTS (basit) -->
+    <div class="related-posts">
+      <h3><i class="bi bi-pin-angle"></i> İlgili Yazılar</h3>
+
+      <ul>
+        {% for post in site.posts limit:3 %}
+          {% if post.url != page.url %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
     <!-- TAGS -->
      <h3><i class="bi bi-tags"></i> Etiketler</h3>
     {% if page.tags %}
@@ -61,22 +80,6 @@ layout: blog
     </div>
     {% endif %}
 
-
-
-    <!-- RELATED POSTS (basit) -->
-    <div class="related-posts">
-      <h3>📌 İlgili Yazılar</h3>
-
-      <ul>
-        {% for post in site.posts limit:3 %}
-          {% if post.url != page.url %}
-            <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
 
   </article>
 
