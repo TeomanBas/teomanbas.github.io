@@ -13,7 +13,7 @@ post_level: -1
 series:
   name: "Docker Serisi"
   order: 1  
-#permalink: /blog/post/:categories/:title
+toc: true
 ---
 
 ## 🚀 Docker Nedir?

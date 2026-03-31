@@ -655,7 +655,7 @@ body.theme-dark .navbar-brand img
 .custom-navbar {
   position: sticky;
   top: 0;
-  z-index: 3000;
+  z-index: 9999;
 }
 
 /* Nav link base */
@@ -692,4 +692,43 @@ body.theme-dark .navbar-brand img
 }
 body {
   padding-top: 80px; /* navbar yüksekliğine göre ayarla */
+  margin-top: 80px;
 }
+/*--------------------------------
+          SCROLL OFSET
+----------------------------------*/
+/* Tüm id’li başlıklar için */
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id] {
+  position: relative; /* pseudo-element referansı için */
+  margin-top: 80px;
+}
+
+/* Scroll offset için görünmez pseudo-element */
+h1[id]::before,
+h2[id]::before,
+h3[id]::before,
+h4[id]::before,
+h5[id]::before,
+h6[id]::before {
+  content: "";
+  display: block;
+  height: 85px;        /* navbar yüksekliği kadar */
+  margin-top: -85px;   /* negatif margin ile scroll offset sağlanır */
+  visibility: hidden;  /* görünmez */
+  pointer-events: none;
+}
+
+/* Post tag’leri */
+.post-tags {
+  display: flex;        /* Yanyana sıralamak için flex */
+  flex-wrap: wrap;      /* Satır dolarsa alt satıra geçsin */
+  gap: 0.5rem;          /* Tag’ler arası boşluk */
+}
+
+
+

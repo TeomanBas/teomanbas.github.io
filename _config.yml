@@ -57,6 +57,7 @@ kramdown:
       line_numbers: false
     block:
       line_numbers: false
+  toc_levels: 2..3   # H2 ve H3 başlıkları TOC’de görünecek
 
 theme: null
 plugins:
@@ -65,6 +66,7 @@ plugins:
 - jekyll-seo-tag
 - jekyll-sitemap
 - jekyll-paginate
+- jekyll-toc
 
 paginate: 5
 paginate_path: "/blog/posts/page:num"

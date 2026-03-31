@@ -42,7 +42,7 @@ permalink: /blog/categories/
 
       <!-- CATEGORY TITLE -->
       <div class="blog-container">
-        <h2 class="mb-4">📂 {{ category }}</h2>
+        <h2 class="mb-4" id="{{ category | slugify }}">📂 {{ category }}</h2>
 
         {% for post in site.posts %}
           {% if post.categories contains category %}

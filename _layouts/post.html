@@ -42,7 +42,16 @@ layout: blog
       {% endif %}
 
     </header>
-      <div class="post-divider"><br></div>
+      <div class="post-divider"></div>
+      
+
+      {% if page.toc %}
+      <aside class="post-toc">
+        <h3>İçindekiler</h3>
+        {{ content | toc }}
+      </aside>
+      {% endif %}
+      
     <!-- CONTENT -->
     <div class="post-content">
       {{ content }}
@@ -68,14 +77,15 @@ layout: blog
       </ul>
     </div>
 
+
     <!-- TAGS -->
-     <h3><i class="bi bi-tags"></i> Etiketler</h3>
+    <h3><i class="bi bi-tags"></i> Etiketler</h3>
     {% if page.tags %}
     <div class="post-tags">
       {% for tag in page.tags %}
         <a href="/blog/tags/#tag-{{ tag | slugify }}" class="tag">
           <i class="bi bi-tags"></i> {{ tag }}
-        </a><span>   </span>
+        </a>
       {% endfor %}
     </div>
     {% endif %}
