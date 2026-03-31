@@ -25,6 +25,12 @@ permalink: /blog/pinned/
           {% if post.author %}
           <span class="meta-item">✍️ {{ post.author }}</span>
           {% endif %}
+        <!-- Okuma süresi -->
+        <div class="menu-item">
+        <span>
+          ⏱️ {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} dk okuma
+        </span>
+        </div>
           {% if post.categories %}
           <span class="meta-item">📂 
             {% for category in post.categories %}
@@ -39,7 +45,7 @@ permalink: /blog/pinned/
         {% if post.tags %}
         <div class="card-tags">
           {% for tag in post.tags %}
-            <a href="/blog/tags/#tag-{{ tag | slugify }}" class="tag">🏷️ {{ tag }}</a>
+            <a href="/blog/tags/#tag-{{ tag | slugify }}" class="tag"><i class="bi bi-tags"></i> {{ tag }}</a>
           {% endfor %}
         </div>
         {% endif %}

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Tüm Blog Yazılarım"
 ---
 
@@ -31,7 +31,12 @@ title: "Tüm Blog Yazılarım"
             ✍️ {{ post.author }}
           </span>
           {% endif %}
-
+        <!-- Okuma süresi -->
+        <div class="menu-item">
+        <span>
+          ⏱️ {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} dk okuma
+        </span>
+        </div>
           {% if post.categories %}
           <span class="menu-item">
              📂 

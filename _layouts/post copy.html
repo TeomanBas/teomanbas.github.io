@@ -33,16 +33,17 @@ layout: blog
         <span>
           ⏱️ {{ content | number_of_words | divided_by: 200 | plus: 1 }} dk okuma
         </span>
+        <br><br>
       </div>
 
       {% if page.description %}
       <p class="post-description">
-         <b><span> •</span> {{ page.description }}</b>
+        {{ page.description }}
       </p>
       {% endif %}
 
     </header>
-      <div class="post-divider"><br></div>
+
     <!-- CONTENT -->
     <div class="post-content">
       {{ content }}
