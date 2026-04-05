@@ -11,7 +11,7 @@ permalink: /blog/series/
 
       <div class="series-block">
     
-    <h2 id="{{ series.name | slugify }}" >📚 {{ series.name }}</h2>
+    <h2 id="{{ series.name | slugify }}" ><i class="bi bi-collection-play"></i> {{ series.name }}</h2>
 
     <!-- serideki postları sırala -->
     {% assign sorted_posts = series.items | sort: "series.order" %}

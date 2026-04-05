@@ -212,10 +212,15 @@ permalink: /blog/
     {% for series in grouped_series %}
     <div class="series-card">
       <a href="/blog/series/#{{ series.name | slugify }}" class="series-link">
-        <h3 class="series-title">{{ series.name }}</h3></a>
+        <h3 class="series-title"><i class="bi bi-collection-play"></i> {{ series.name }}</h3></a>
+
+        <!-- Son güncelleme tarihi -->
+        {% assign last_post = series.items | sort: "series.order" | last %}
+        <p class="series-meta">📅 Son güncelleme: {{ last_post.date | date: "%d %B %Y" }}</p>
+
         <p class="series-count">
           {% assign count = series.items | size %}
-          {{ count }} yazı içeriyor
+          📝 {{ count }} yazı içeriyor
         </p>
       
 
