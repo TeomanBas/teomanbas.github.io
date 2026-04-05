@@ -11,6 +11,10 @@ filter_key: recommended
 filter_value: true
 post_level: -1   
 permalink: /blog/post/:categories/:title/
+series_check: false
+series:
+  name: "Docker Seridsi"
+  order: 3
 ---
 
 ## 🚀 Docker Nedir?

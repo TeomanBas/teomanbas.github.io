@@ -11,6 +11,10 @@ filter_key: starred
 filter_value: true
 post_level: -1   
 permalink: /blog/post/:categories/:title/
+series_check: true
+series:
+  name: "Docsdfker Serissdfsdfi"
+  order: 2
 ---
 
 ## 🚀 Docker Nedir?

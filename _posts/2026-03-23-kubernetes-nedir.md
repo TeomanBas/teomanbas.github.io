@@ -10,6 +10,10 @@ image: /assets/images/kubernetes.jpg
 filter_key: recommended
 filter_value: true
 post_level: 1   
+series_check: true
+series:
+  name: "Docker Serisi"
+  order: 2
 ---
 
 ## 🚀 Docker Nedir?

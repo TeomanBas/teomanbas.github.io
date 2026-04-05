@@ -202,3 +202,33 @@ permalink: /blog/
 </section>
 {% endif %}
 
+
+<!-- Blog Serileri -->
+ {% include series.html %}
+<section class="blog-series-overview">
+  <h1>📚 <a href="/blog/series/">Yazı Serileri</a></h1>
+
+  <div class="series-grid">
+    {% for series in grouped_series %}
+    <div class="series-card">
+      <a href="/blog/series/#{{ series.name | slugify }}" class="series-link">
+        <h3 class="series-title">{{ series.name }}</h3></a>
+        <p class="series-count">
+          {% assign count = series.items | size %}
+          {{ count }} yazı içeriyor
+        </p>
+      
+
+      <!-- Serideki ilk birkaç post -->
+      <ul class="series-preview">
+        {% assign preview_posts = series.items | sort: "series.order" | slice: 0,3 %}
+        {% for post in preview_posts %}
+          <li>
+            <a href="{{ post.url }}">{{ post.series.order }}. {{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>

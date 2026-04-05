@@ -9,12 +9,12 @@ tags: [docker, container, linux, devops, virtualization]
 image: /assets/images/docker-cover.jpg
 filter_key: recommended
 filter_value: true
-post_level: -1   
-permalink: /blog/post/:categories/:title/
+post_level: -1 
 series_check: true
 series:
-  name: "Docker Serissdfsdfsdfi"
-  order: 3
+  name: "Docker Serisi"
+  order: 3  
+toc: true
 ---
 
 ## 🚀 Docker Nedir?
@@ -46,7 +46,13 @@ Container’lar:
 Örnek:
 
 ```bash
-docker run -d -p 80:80 nginx
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;
+docker run -d -p 80:80 nginx;docker run -d -p 80:80 nginx;docker run -d -p 80:80 nginx;docker run -d -p 80:80 nginx;
 ````
 
 Bu komut:

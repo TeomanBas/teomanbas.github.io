@@ -1,5 +1,81 @@
 ---
 layout: blog
-title: "Post Serileri"
+title: "Yazı Serileri"
 permalink: /blog/series/
 ---
+
+{% include series.html %}
+<!-- 3. render -->
+<section class="blog-container">
+{% for series in grouped_series %}
+
+      <div class="series-block">
+    
+    <h2 id="{{ series.name | slugify }}" >📚 {{ series.name }}</h2>
+
+    <!-- serideki postları sırala -->
+    {% assign sorted_posts = series.items | sort: "series.order" %}
+
+    <div class="blog-grid">
+
+      {% for post in sorted_posts %}
+      <article class="blog-card">
+
+        <a href="{{ post.url }}" class="card-link">
+          <h2 class="card-title">{{ post.title }}</h2>
+        </a>
+
+        <p class="card-desc">
+          {{ post.description }}
+        </p>
+
+        <div class="card-meta">
+
+          <span class="meta-item">
+            📅 {{ post.date | date: "%d %B %Y" }}
+          </span>
+
+          {% if post.author %}
+          <span class="meta-item">
+            ✍️ {{ post.author }}
+          </span>
+          {% endif %}
+
+          <div class="menu-item">
+            <span>
+              ⏱️ {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} dk okuma
+            </span>
+          </div>
+
+          {% if post.categories %}
+          <span class="meta-item">
+            📂 
+            {% for category in post.categories %}
+              <a href="/blog/categories/#category-{{ category | slugify }}">
+                {{ category }}{% unless forloop.last %}, {% endunless %}
+              </a>
+            {% endfor %}
+          </span>
+          {% endif %}
+
+        </div>
+
+        {% if post.tags %}
+        <div class="card-tags">
+          {% for tag in post.tags %}
+            <a href="/blog/tags/#tag-{{ tag | slugify }}" class="tag">
+              <i class="bi bi-tags"></i> {{ tag }}
+            </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </article>
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+{% endfor %}
+</section>

@@ -1,0 +1,12 @@
+
+{% assign all_series_posts = "" | split: "" %}
+
+<!-- 1. sadece series_check true olanları al -->
+{% for post in site.posts %}
+  {% if post.series_check %}
+    {% assign all_series_posts = all_series_posts | push: post %}
+  {% endif %}
+{% endfor %}
+
+<!-- 2. serilere göre grupla -->
+{% assign grouped_series = all_series_posts | group_by: "series.name" %}

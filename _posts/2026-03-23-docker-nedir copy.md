@@ -5,12 +5,16 @@ description: "Docker nedir, nasıl çalışır ve neden kullanılır? Container 
 date: 2026-03-23 20:00:00 +0300
 author: "Teoman Bas"
 categories: [DevOps, Docker]
-tags: [docker, container, linux, devops, virtualization]
+tags: [docker, container, linux, devops, virtualization, dockser, contaisner, linusx, devosps, virtualiszation]
 image: /assets/images/docker-cover.jpg
 filter_key: starred
 filter_value: true
 post_level: 5   
 permalink: /blog/post/:categories/:title/
+series_check: true
+series:
+    name: "kubernetes"
+    order: 2
 ---
 
 ## 🚀 Docker Nedir?
