@@ -13,7 +13,7 @@ post_level: -1
 permalink: /blog/post/:categories/:title/
 series_check: false
 series:
-  name: "Docker Seridsi"
+  name: "Docsdfker Seridsi"
   order: 3
 ---
 

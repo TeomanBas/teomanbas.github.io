@@ -72,11 +72,11 @@ permalink: /blog/tags/
                   </span>
                   {% endif %}
 
-                  {% if post.tags %}
+                  {% if post.categories %}
                   <span class="menu-item">
                     📂 
-                    {% for tags in post.tags %}
-                      <a href="/blog/tags/#tags-{{ tag | slugify }}">{{ tags }}{% unless forloop.last %}, {% endunless %}</a>
+                    {% for category in post.categories %}
+                      <a href="/blog/categories/#category-{{ category | slugify }}">{{ category }}</a>
                     {% endfor %}
                   </span>
                   

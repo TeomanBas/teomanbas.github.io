@@ -13,7 +13,7 @@ post_level: -1
 permalink: /blog/post/:categories/:title/
 series_check: true
 series:
-  name: "xDocker Serisi"
+  name: "xDockdfer Serisi"
   order: 3 
 ---
 

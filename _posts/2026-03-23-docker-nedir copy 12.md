@@ -12,7 +12,7 @@ filter_value: true
 post_level: -1 
 series_check: true
 series:
-  name: "Docker Serisi"
+  name: "Dockdsfser Serisi"
   order: 1  
 toc: true
 ---
